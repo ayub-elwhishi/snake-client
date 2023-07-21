@@ -5,4 +5,4 @@ const input = require("./input");
 
 console.log("Connecting...");
 const conn = client.connect();
-const stdin = input.setupInput();
+const stdin = input.setupInput(conn);
