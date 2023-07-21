@@ -15,6 +15,9 @@ const handleUserInput = function (key) {
 	{
 		connection.write(MOVEMENT[key])	
 	}
+	if (key === 'k') {
+		connection.write("Say: Hello!")
+	}
 };
 
 const setupInput = function (conn) {
