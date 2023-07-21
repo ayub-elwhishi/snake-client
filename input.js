@@ -1,9 +1,4 @@
-const MOVEMENT = {
-	w: "Move: up",
-	a: "Move: left",
-	s: "Move: down",
-	d: "Move: right"
-}
+const constants = require("./constants")
 
 let connection = undefined
 
@@ -11,9 +6,9 @@ const handleUserInput = function (key) {
 	if (key === "\u0003") {
 		process.exit();
 	}
-	else if(MOVEMENT[key] && connection)
+	else if(constants.MOVEMENT_KEYS[key] && connection)
 	{
-		connection.write(MOVEMENT[key])	
+		connection.write(constants.MOVEMENT_KEYS[key])	
 	}
 	if (key === 'k') {
 		connection.write("Say: Hello!")
